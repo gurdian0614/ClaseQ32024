@@ -9,7 +9,7 @@ namespace ClaseQ32024
 
         public String Tamano { get; set; }
 
-        public string Familia { get; set; }
+        public FamiliaAve FamiliaAve { get; set; }
 
         public string SexoBiologico { get; set; }
 
@@ -19,6 +19,7 @@ namespace ClaseQ32024
         public Ave()
         {
             EsVoladora = true;
+            FamiliaAve = new FamiliaAve();
         }
 
         public void Imprimir()
@@ -26,7 +27,8 @@ namespace ClaseQ32024
             Console.WriteLine($"Nombre: {Nombre}");
             Console.WriteLine($"Color: {Color}");
             Console.WriteLine($"Tamaño: {Tamano}");
-            Console.WriteLine($"Familia: {Familia}");
+            Console.WriteLine($"Familia: {FamiliaAve.Nombre}");
+            Console.WriteLine($"Grupo Familia: {FamiliaAve.Grupo}");
             Console.WriteLine($"Sexo Biológico: {SexoBiologico}");
             Console.WriteLine($"Es Voladora: {(EsVoladora ? "Sí" : "No")}");
             Console.WriteLine();
